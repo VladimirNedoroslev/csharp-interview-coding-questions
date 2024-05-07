@@ -1,0 +1,24 @@
+User 
+------
+id int int
+first_name varchar(200)
+last_name varchar(200)
+email varchar(200)
+
+Order
+-------
+idint
+user_id int
+date int
+
+
+OrderItems
+--------
+id int
+order_id int
+item_id int
+price decimal
+quantity int
+
+
+-- Select user who do no
