@@ -1,4 +1,4 @@
-namespace Refactoring;
+namespace Refactoring.Examples;
 
 public enum PaymentMethod
 {

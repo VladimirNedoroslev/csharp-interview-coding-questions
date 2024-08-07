@@ -1,24 +1,22 @@
 using Microsoft.Extensions.Caching.Memory;
 
-namespace Refactoring;
+namespace Refactoring.Examples;
 
-public class Country
+file class Country
 {
     public string Id { get; set; }
     public string Name { get; set; }
 }
 
-public interface ICountryRepository
+file interface ICountryRepository
 {
     List<Country> GetAllCountries();
 }
 
-public class CountryService
+file class CountryService
 {
-
     private readonly IMemoryCache _memoryCache;
     private readonly ICountryRepository _countryRepository;
-
 
     public CountryService(IMemoryCache memoryCache, ICountryRepository countryRepository)
     {
@@ -26,14 +24,26 @@ public class CountryService
         _countryRepository = countryRepository;
     }
 
+    private object _lock = new object();
+    
     public IEnumerable<Country> GetCountries()
     {
         
         var countries = (IEnumerable<Country>)_memoryCache.Get("territoryCacheKey");
 
-        countries = _countryRepository.GetAllCountries(); // very expensive operation
+        if (countries is null)
+        {
+            lock (_lock)
+            {
 
-        _memoryCache.Set("territoryCacheKey", countries);
+                if (countries is null)
+                    countries = _countryRepository.GetAllCountries(); // very expensive operation    
+            }
+        }
+        
+
+        if (countries is not null)
+            _memoryCache.Set("territoryCacheKey", countries, TimeSpan.FromHours(1));
         return countries;
     }
 }
