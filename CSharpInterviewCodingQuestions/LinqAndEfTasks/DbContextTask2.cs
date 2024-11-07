@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 namespace LinqAndEfTasks;
@@ -47,7 +44,6 @@ file class SomeReportService
     public async Task SomeReportAsync()
     {
         var regions = await _dbContext.Regions
-            
             .ToListAsync();
         foreach (var region in regions)
         {

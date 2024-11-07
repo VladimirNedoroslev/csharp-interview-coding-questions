@@ -8,7 +8,7 @@ public static class Test4
     public static void Start()
     {
         var list = new List<int> {1, 2, 3, 4, 5};
-        ChangeList(list);
+        ChangeListRef(ref list);
         foreach (var number in list)
         {
             Console.WriteLine(number); // ?
@@ -20,7 +20,7 @@ public static class Test4
         
     private static void ChangeList(List<int> list)
     {
-        list = new List<int> {6, 7, 8};
+        list = new List<int>();
     }
 
     private static void ChangeListRef(ref List<int> list)

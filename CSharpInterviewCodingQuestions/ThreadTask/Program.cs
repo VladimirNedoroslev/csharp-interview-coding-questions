@@ -1,12 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿namespace ThreadTask1;
 
-namespace ThreadTask1
+class Program
 {
-    class Program
+    private static async Task Main()
     {
-        private static async Task Main()
-        {
-             await TaskTest1.Start();
-        }
+        await TaskTest2.Start();
     }
 }

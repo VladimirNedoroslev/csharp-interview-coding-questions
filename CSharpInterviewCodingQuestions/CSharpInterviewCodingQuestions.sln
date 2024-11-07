@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{928F174D-3896-4D18-AAE5-6533B890CE23}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStructures\DataStructures.csproj", "{ABC13E54-0DB8-4FF1-BBB3-928E17754F54}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesTask", "DelegatesTask\DelegatesTask.csproj", "{1C335736-CCD5-43F6-A3F0-C093254E789F}"
@@ -14,16 +12,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqAndEfTasks", "LinqAndEf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refactoring", "Refactoring\Refactoring.csproj", "{D865FF04-E850-4FB4-BBC7-05994CBC9D54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoringWebApi", "RefactoringWebApi\RefactoringWebApi.csproj", "{9703C46C-494D-44C3-9288-4482C8603BE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|x64 = Release|x64
 		Debug|x64 = Debug|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{928F174D-3896-4D18-AAE5-6533B890CE23}.Release|x64.ActiveCfg = Release|x64
-		{928F174D-3896-4D18-AAE5-6533B890CE23}.Release|x64.Build.0 = Release|x64
-		{928F174D-3896-4D18-AAE5-6533B890CE23}.Debug|x64.ActiveCfg = Debug|x64
-		{928F174D-3896-4D18-AAE5-6533B890CE23}.Debug|x64.Build.0 = Debug|x64
 		{ABC13E54-0DB8-4FF1-BBB3-928E17754F54}.Release|x64.ActiveCfg = Release|Any CPU
 		{ABC13E54-0DB8-4FF1-BBB3-928E17754F54}.Release|x64.Build.0 = Release|Any CPU
 		{ABC13E54-0DB8-4FF1-BBB3-928E17754F54}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -48,5 +44,9 @@ Global
 		{D865FF04-E850-4FB4-BBC7-05994CBC9D54}.Release|x64.Build.0 = Release|Any CPU
 		{D865FF04-E850-4FB4-BBC7-05994CBC9D54}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{D865FF04-E850-4FB4-BBC7-05994CBC9D54}.Debug|x64.Build.0 = Debug|Any CPU
+		{9703C46C-494D-44C3-9288-4482C8603BE1}.Release|x64.ActiveCfg = Release|Any CPU
+		{9703C46C-494D-44C3-9288-4482C8603BE1}.Release|x64.Build.0 = Release|Any CPU
+		{9703C46C-494D-44C3-9288-4482C8603BE1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9703C46C-494D-44C3-9288-4482C8603BE1}.Debug|x64.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

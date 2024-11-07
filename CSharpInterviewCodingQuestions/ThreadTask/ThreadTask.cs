@@ -1,14 +1,11 @@
-using System;
-using System.Threading;
+namespace ThreadTask1;
 
-namespace ThreadTask1
+public static class ThreadTask
 {
-    public static class ThreadTask
-    {
-        private static int _x;
+    private static int _x;
 
-        public static void Start()
-        {
+    public static void Start()
+    {
             var thread = new Thread(Foo);
             thread.Start();
             for (var i = 0; i < 100000; i++)
@@ -22,12 +19,11 @@ namespace ThreadTask1
             Console.WriteLine(_x); // ?
         }
 
-        private static void Foo(object? obj)
-        {
+    private static void Foo(object? obj)
+    {
             for (var i = 0; i < 100000; i++)
             {
                 _x++;
             }
         }
-    }
 }

@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
 namespace LinqAndEfTasks;
@@ -31,13 +28,13 @@ public static class EfTask
     {
         return dbContext.People
             .Where(x => x.IsActive)
-            .AsEnumerable();
+            .ToList();
     }
 
     private static IEnumerable<Person> GetActivePeople2(FooDbContext dbContext)
     {
         return dbContext.People
-            .AsEnumerable()
+            .ToList()
             .Where(x => x.IsActive);
     }
 }

@@ -1,4 +1,4 @@
-namespace Linq;
+namespace LinqAndEfTasks;
 
 public static class LinqTask
 {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ValueReferenceTask;
+﻿namespace ValueReferenceTask;
 
 class Program
 {

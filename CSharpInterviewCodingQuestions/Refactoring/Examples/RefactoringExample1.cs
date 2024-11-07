@@ -35,7 +35,6 @@ public class Exporter
         return new CsvReport()
         {
             Csv = result,
-            UsersCount = users.Length,
         };
     }
 
